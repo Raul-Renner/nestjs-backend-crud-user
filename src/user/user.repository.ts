@@ -1,4 +1,5 @@
-import { Injectable } from '@nestjs/common';
+/* eslint-disable prettier/prettier */
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from 'src/db/prisma.service';
 import User from './user.entity';
 
@@ -11,9 +12,13 @@ export class UserRepository {
   }
 
   async findBy(id: number) {
-    return this.prismaService.user.findUnique({
+    const response = await this.prismaService.user.findUnique({
       where: { id },
     });
+
+    if (!response) throw new NotFoundException('Usuário não encontrado!');
+
+    return response;
   }
 
   async create(user: User) {
@@ -23,7 +28,7 @@ export class UserRepository {
   }
 
   async update(user: User) {
-    if (!user.id) throw new Error('User not found!');
+    if (!user.id) throw new NotFoundException('User not found!');
     return this.prismaService.user.update({
       where: { id: user.id },
       data: user as any,

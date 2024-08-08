@@ -3,9 +3,10 @@ POST http://localhost:3000/user
 content-Type: application/json
 
 {
-    "name": "test",
-    "email": "rr112test@gmail.com",
-    "password": "qwe121213"
+    "name": "qwewqe",
+    "email": "rr112te2st1@gmail.com",
+    "password": "qwetest",
+    "isActive": true
 }
 
 ####
@@ -14,7 +15,7 @@ GET http://localhost:3000/user
 
 ###
 
-GET http://localhost:3000/user/1
+GET http://localhost:3000/user/11
 
 ####
 
@@ -26,8 +27,10 @@ PATCH http://localhost:3000/user/1
 content-Type: application/json
 
 {
-    "name": "Raul renner1",
-    "email": "rr22211112@gmail.com"
+    "name": "qweq2",
+    "email": "q@gmail.com",
+    "isActive": false
+    
 }
 
 
@@ -58,6 +61,6 @@ PATCH http://localhost:3000/temp/1
 content-Type: application/json
 
 {
-    "name": "Raul rennev3v3r",
+    "name": "Raulv2 rennev3v3r",
     "email": "test21111@gmail.com"
 }
