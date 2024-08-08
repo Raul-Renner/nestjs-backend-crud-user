@@ -1,0 +1,63 @@
+
+POST http://localhost:3000/user
+content-Type: application/json
+
+{
+    "name": "test",
+    "email": "rr112test@gmail.com",
+    "password": "qwe121213"
+}
+
+####
+
+GET http://localhost:3000/user
+
+###
+
+GET http://localhost:3000/user/1
+
+####
+
+DELETE http://localhost:3000/user/2
+
+###################################
+
+PATCH http://localhost:3000/user/1
+content-Type: application/json
+
+{
+    "name": "Raul renner1",
+    "email": "rr22211112@gmail.com"
+}
+
+
+################- POSTGRESSQL - #################
+
+POST http://localhost:3000/temp
+content-Type: application/json
+
+{
+    "name": "RENNER2",
+    "email": "rrTST@gmail.com"
+}
+
+##############
+GET http://localhost:3000/temp
+
+##############
+
+GET http://localhost:3000/temp/1
+
+##############
+
+DELETE http://localhost:3000/temp/4
+
+##############
+
+PATCH http://localhost:3000/temp/1
+content-Type: application/json
+
+{
+    "name": "Raul rennev3v3r",
+    "email": "test21111@gmail.com"
+}
